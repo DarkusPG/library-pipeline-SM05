@@ -94,6 +94,25 @@ def test_handle_missing_drop(sample_df_with_missing):
     assert result['name'].notna().all()
     assert result['value'].notna().all()
 
+def validate_isbn(isbn):
+"""Validate ISBN-13 format.   
+        Args:
+            isbn (str): ISBN string to validate                 
+        Returns:
+            bool: True if valid, False otherwise
+"""
+        if not isbn:
+        return False                                                                                                  
+        # Remove hyphens
+            isbn = isbn.replace('-', '')
+        # Check length
+        if len(isbn) != 13:
+        return False
+        # Check if all digits
+        if not isbn.isdigit():
+        return False
+        return True
+
 def test_handle_missing_fill(sample_df_with_missing):
     """Test filling missing values."""
     result = handle_missing_values(
