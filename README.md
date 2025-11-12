@@ -1,4 +1,5 @@
 # Library Data Pipeline
+![CI](https://github.com/DarkusPG/library-pipeline-SM05/actions/workflows/ci.yml/badge.svg)
 
 ## Project Overview
 [TODO: Describe the library's data quality problem]
