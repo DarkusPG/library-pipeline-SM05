@@ -4,10 +4,7 @@ Data validation functions.
 
 # Example function to implement:
 def validate_isbn(isbn):
-    """Validate ISBN-13 format."""
-    pass
-
-    def validate_isbn(isbn):
+        isbn_str = str(isbn)  # Convert to string
     """Validate ISBN-13 format.
 
     Args:
